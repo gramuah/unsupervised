@@ -1,0 +1,7 @@
+video0000004 30 44 0 CricketShot
+video0000004 622 668 1 CricketShot
+video0000004 909 951 2 CricketShot
+video0000004 6 32 0 CricketBowling
+video0000004 341 365 1 CricketBowling
+video0000004 558 622 2 CricketBowling
+video0000004 847 891 3 CricketBowling
