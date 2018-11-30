@@ -46,7 +46,7 @@ We also release a demo to show how to extract features from a set of video frame
 
 ```Shell
     cd extract_features_demo
-    python 
+    python extract_features.py
 ```
 
 
