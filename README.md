@@ -27,22 +27,21 @@ If you make use of this data and software, please cite the following reference i
 
 The has been developed and tested under Ubuntu 14.04 and Ubuntu 16.04.
 
- A Caffe installation is required.
+A [Caffe](http://caffe.berkeleyvision.org/) installation is required.
 
 
 ## Pre-trained Unsupervised models
 
 We provide pre-trained Caffe models trained on the two datasets used in our discovery experiments: the UCF-101 and the 5-Context.
 
-
 Note that we always release the models for the two loss functions for unsupervised learning introduced in the paper, i.e. the Lq and Ls losses.
 
 Python script are provided with all the new layers implemented.
 
+
 ## Extract features demo
 
 We also release a demo to show how to extract features from a set of video frames with any of our pretrained models.
-
 
 ```Shell
     cd extract_features_demo
