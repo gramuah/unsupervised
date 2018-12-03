@@ -24,10 +24,11 @@ sys.path.insert(0, caffe_root)
 import caffe
 
 def main():
-    MODEL_FILE = 'deploy.prototxt'
+    
     print('Drawing net to %s' % MODEL_FILE)
     # decrease if you want to preview during training
     PRETRAINED_FILE = 'path_to_one_of_our_caffe_models.caffemodel' # IMPORTANT: You need to select a pretrained model	
+    MODEL_FILE = 'path_to_the_correspoding_deploy.prototxt' # IMPORTANT: You need to select a the corresponding deploy.prototxt	
     caffe.set_mode_cpu()
     caffe.set_device(1)
     net = caffe.Net(MODEL_FILE, PRETRAINED_FILE, caffe.TEST)
@@ -35,8 +36,7 @@ def main():
     
     height = 227
     width = 227
-    flow = False
-    #path_to_images = '../examples/ucf101/RGB/'
+    flow = False    
     
     f = open(TEST_DATA_FILE, 'r')
     f_lines = f.readlines()
@@ -56,7 +56,6 @@ def main():
       video_dict[clc_video]['frames'] = frames[0].split('/frame')[-2] + '/frame_%05d.jpg'
       video_dict[clc_video]['reshape'] = (240,320)
       video_dict[clc_video]['num_frames'] = num_frames
-      #video_dict[video]['label'] = l
       video_order.append(clc_video) 
       
 
@@ -90,7 +89,6 @@ def main():
     eval_frames =[]
     for j in idx_list:
         key = video_order[j]
-        #label = video_dict[key]['label']
         video_reshape = video_dict[key]['reshape']
         num_frames = video_dict[key]['num_frames']
         frames = video_dict[key]['frames']
@@ -100,8 +98,6 @@ def main():
         
         for i in range(0,num_frames):#range(np.round(num_frames/20)+1):#Analysis each 20 frames
           idx = i + 1
-          #idx = jump_idx + (i+1)
-          #jump_idx += 20 #Analysis each 20 frames 
           if (idx > num_frames):
                 idx = num_frames
           curr_frame = frames % idx
