@@ -25,7 +25,7 @@ If you make use of this data and software, please cite the following reference i
 
 ## Requirements
 
-The has been developed and tested under Ubuntu 14.04 and Ubuntu 16.04.
+The project has been developed and tested under Ubuntu 14.04 and Ubuntu 16.04.
 
 A [Caffe](http://caffe.berkeleyvision.org/) installation is required.
 
@@ -48,4 +48,10 @@ We also release a demo to show how to extract features from a set of video frame
     python extract_features.py
 ```
 
+In the script extract_features.py simply change the following lines to select one of our pre-trained models for the feature extraction:
+
+```Shell
+    PRETRAINED_FILE = 'path_to_one_of_our_caffe_models.caffemodel'
+    MODEL_FILE = 'path_to_the_correspoding_deploy.prototxt'
+```
 
