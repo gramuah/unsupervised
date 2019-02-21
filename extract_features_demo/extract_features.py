@@ -8,8 +8,17 @@ import caffe
 # GLOBALS
 SET_MODE = 'gpu' # 'cpu' to use the cpu mode
 DEVICE_ID = 0 # Choose your gpu ID, if you are using gpu mode
+
 PRETRAINED_FILE = 'path_to_one_of_our_caffe_models.caffemodel' # IMPORTANT: You need to select a pretrained model
-MODEL_FILE = 'path_to_the_correspoding_deploy.prototxt' # IMPORTANT: You need to select a the corresponding deploy.prototxt
+#Below you have an example for the Lq loss trained with dataset UCF101
+#PRETRAINED_FILE = '../models/UCF101/lq_loss/caffe_models/Lq_loss_iter_5000.caffemodel' 
+
+
+MODEL_FILE = 'path_to_the_correspoding_deploy.prototxt'  #IMPORTANT: You need to select the corresponding deploy.prototxt
+#Below you have an example for the Lq loss trained with dataset UCF101
+#MODEL_FILE = '../src/UCF101/lq_loss/prototxt/deploy_Lq_loss.prototxt' 
+
+
 TEST_DATA_FILE = 'video_list.txt'
 HEIGHT = 227
 WIDTH = 227
