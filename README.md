@@ -19,7 +19,7 @@ If you make use of this data and software, please cite the following reference i
 	author 	= {Redondo-Cabrera, C. and Lopez-Sastre, R.~J.},
 	title   = {Unsupervised learning from videos using temporal coherency deep networks},
 	journal = {CVIU},
-	year    = {2018},
+	year    = {2019},
 	}
 
 
